@@ -96,7 +96,7 @@ WEB_SCRAPING_EDA/
 ---
 
 
-## 📦 Requirements
+##  Requirements
 
 ```
 streamlit
