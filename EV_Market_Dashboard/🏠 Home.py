@@ -2,6 +2,7 @@ import streamlit as st
 from utils.styles import local_css
 import base64
 import pandas as pd
+import os
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
@@ -13,17 +14,16 @@ st.set_page_config(
 local_css()
 
 # ---------------- LOAD DATA ----------------
-df = pd.read_csv("1.data/cleaned_EV_Dataset3.xls")
-
+base_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(base_dir, "1.data", "cleaned_EV_Dataset3.xls")
+df = pd.read_csv(file_path)
 
 # ------------ LOAD IMAGE AS BASE64 ------------
-with open("images/e_car.avif", "rb") as img_file:
+img_path = os.path.join(base_dir, "images", "e_car.avif")
+with open(img_path, "rb") as img_file:
     img = base64.b64encode(img_file.read()).decode()
 
 # ---------------- HERO SECTION ----------------
-
-
-
 st.markdown(
 f"""
 <style>
@@ -50,7 +50,6 @@ html, body {{
     url("data:image/jpg;base64,{img}");
 
     background-size: cover;
-    /* Shifted right by half the sidebar's width (~320px) so it centers within the visible main area, not the full app width */
     background-position: calc(50% + 160px) center;
     background-repeat: no-repeat;
 }}
@@ -91,7 +90,6 @@ html, body {{
     line-height: 1.8;
 }}
 
-/* Button row — moved up slightly, truly centered regardless of column widths, then nudged right/up */
 div[data-testid="stHorizontalBlock"]:has(div[data-testid="stButton"]) {{
     position: absolute;
     top: calc(100vh - 200px);
@@ -109,7 +107,6 @@ div[data-testid="stHorizontalBlock"]:has(div[data-testid="stButton"]) > div[data
     width: auto !important;
 }}
 
-/* Button — transparent fill, rectangular outline with soft rounded corners */
 div[data-testid="stButton"] > button {{
     background-color: transparent;
     color: #FFFFFF;
@@ -160,10 +157,7 @@ div[data-testid="stMetricValue"]{{
 unsafe_allow_html=True
 )
 
-
-
 # ---------------- HERO ----------------
-
 st.markdown(
 """
 <div class="hero">
@@ -194,7 +188,7 @@ Range Analysis • Charging • Efficiency • Pricing • Market Trends
 unsafe_allow_html=True
 )
 
-# ---------------- BUTTON (floats over the hero via CSS above) ----------------
+# ---------------- BUTTON ----------------
 col1, col2, col3 = st.columns([1, 1, 1])
 with col2:
     if st.button("Let's Explore", key="explore_dashboard_btn"):
