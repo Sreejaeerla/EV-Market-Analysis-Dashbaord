@@ -1,16 +1,16 @@
-# 🚗 European EV Market Dashboard
+#  European EV Market Dashboard
 
 An interactive data analytics dashboard built with **Python** and **Streamlit** that explores the European Electric Vehicle (EV) market — covering vehicle offerings, brand presence, feature availability, pricing, and market distribution.
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 The European EV market has grown rapidly, giving consumers a broad and increasingly complex range of vehicles to evaluate, while manufacturers must keep pace with shifting market dynamics and customer preferences. This dashboard examines the EV landscape to help both consumers and manufacturers better understand what's shaping the European EV industry.
 
 ---
 
-## 📁 Folder Structure
+##  Folder Structure
 
 ```
 WEB_SCRAPING_EDA/
@@ -46,7 +46,7 @@ WEB_SCRAPING_EDA/
 
 ---
 
-## 📊 Dashboard Pages
+##  Dashboard Pages
 
 | Page | Description |
 |------|-------------|
@@ -61,7 +61,7 @@ WEB_SCRAPING_EDA/
 
 ---
 
-## 🎯 Key Objectives
+##  Key Objectives
 
 - ✔ Explore trends and patterns across the European EV market
 - ✔ Analyze vehicle range and energy efficiency
@@ -72,7 +72,7 @@ WEB_SCRAPING_EDA/
 
 ---
 
-## 💡 Key Insights
+##  Key Insights
 
 - Most EV models are concentrated in the **mid-range category**, balancing range, efficiency, and affordability
 - **Segment C** is the most competitive market segment with the highest number of models
@@ -82,7 +82,7 @@ WEB_SCRAPING_EDA/
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Tool | Purpose |
 |------|---------|
@@ -95,25 +95,6 @@ WEB_SCRAPING_EDA/
 
 ---
 
-## ⚙️ Installation & Setup
-
-**1. Clone the repository**
-```bash
-git clone https://github.com/YOUR_USERNAME/WEB_SCRAPING_EDA.git
-cd WEB_SCRAPING_EDA
-```
-
-**2. Install dependencies**
-```bash
-pip install -r requirements.txt
-```
-
-**3. Run the app**
-```bash
-streamlit run Home.py
-```
-
----
 
 ## 📦 Requirements
 
